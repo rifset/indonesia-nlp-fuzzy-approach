@@ -2,11 +2,9 @@ The Idea of Improving Indonesian Colloquial Lexicon Through Fuzzy Matching Appro
 ================
 
 ![cover.jpg](asset/cover.jpg)
-
-Asset illustration by [Wijaya Kusuma](https://unsplash.com/@wijayakusuma?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/people-riding-motorcycle-on-road-during-daytime-Bz2hBLVWwGU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+*Asset illustration by [Wijaya Kusuma](https://unsplash.com/@wijayakusuma?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/people-riding-motorcycle-on-road-during-daytime-Bz2hBLVWwGU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)*
 
 > *Yuo might notcie taht this sentnece have many mispeled words, but yuo can raed it proprelly dsepite teh msispeillgns, couldn’t you?*
-> 
 
 It first came from the meme which claimed that as long as the first and last letters are correct we can read any jumbled words. There never was a Cambridge researcher though, but there is some science underlying why we can read that particular jumbled text. One of the findings is that because the whole text is reasonably easy to predict [1]. As it is valid for humans, can a computer aka machine read the same text as we do?
 
@@ -15,8 +13,7 @@ It first came from the meme which claimed that as long as the first and last let
 In a nutshell, the word correction algorithm works by comparing input words against a predefined dictionary or language model. If a word appears to be misspelled based on certain rules, the algorithm then suggests its corresponding corrections. The word correction algorithm should, at least, have three components: language model, potential candidate, and selection criterion. Every misspelled word has its potential “correct” word candidates which are sourced from its corresponding language and valued by certain selection criteria.
 
 ![Word correction algorithm, illustrated](asset/illust-flow.jpg)
-
-Word correction algorithm, illustrated
+*Word correction algorithm, illustrated*
 
 Fuzzy string matching is an existing successful concept that is used as the foundation part of word correction algorithms. The word "fuzzy" itself means a flexible or tolerant approach, allowing for similarities and approximations rather than rigid, exact matches. In the context of fuzzy string matching, the algorithm considers the fuzziness or imprecision in the comparison of strings, accommodating variations like typos or slight differences.
 
@@ -47,8 +44,7 @@ All of the words above have the same metaphone key though their spelling is diff
 String similarity is any measure of how similar any two sequences of characters are [4]. String similarity is useful for determining how phonologically close any two words are and can also calculate their morphological relatedness. Phonological similarity can be addressed by the edit distance method, while q-gram and cosine similarity can be utilized to calculate morphological similarity. As I am still a newbie in NLP and linguistics study, kindly correct me if I used these terms incorrectly :)
 
 ![Cosine similarity, illustrated in a 2-dimensional plane [5].](asset/cosine-similarity-2d.jpg)
-
-Cosine similarity, illustrated in a 2-dimensional plane [5].
+*Cosine similarity, illustrated in a 2-dimensional plane [5].*
 
 Cosine similarity measures the similarity between two vectors by calculating the cosine of the angle between the two vectors [5]. Suppose a string can be represented as a vector, we can compare any two strings by calculating the angle between their respective vector representations. The most common vector encoding methods are tf-idf and bag-of-words encoding. For instance, bag-of-words encoding turns strings into the n-dimensional vector of counting numbers representing how frequently each word is in that string (or letters in words). Let’s revisit our example above.
 
